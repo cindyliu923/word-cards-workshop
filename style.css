@@ -1,0 +1,198 @@
+:root {
+  --color-primary: #4457FF;
+  --color-primary-dark: #3746CF;
+  --color-grey: #6A6A6A;
+  --color-black: #333333;
+  --color-red: #FF495F;
+  --color-red-dark: #EF3148;
+  --color-red-light: #ff495f91;
+
+  --shadow: 0px 0px 20px rgba(170, 189, 255, 0.22);
+  --botton-outline: 0px 0px 0px 2px #4457ff54;
+  --botton-outline-red: 0px 0px 0px 2px #ff495f91;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F8F9FC;
+  font-family: BlinkMacSystemFont, -apple-system,"Roboto",  "Helvetica", "Arial",蘋方, PingFang, 微軟正黑體,"儷黑 Pro", sans-serif;
+  color: var(--color-black);
+}
+
+header {
+  background-color: #fff;
+  padding: 1rem;
+  color: var(--color-primary);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+section {
+  display: flex;
+  padding: 0 .5rem;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button {
+  border: none;
+  padding: .4rem .7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .1s;
+  background-color: inherit;
+}
+
+.button.button-primary {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: #fff;
+}
+
+.button.button-primary:hover {
+  background-color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+}
+
+.button.button-primary:active {
+  box-shadow: var(--botton-outline);
+}
+
+.button.button-primary-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button.button-primary-outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.button.button-primary-outline:active {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--botton-outline);
+}
+
+.button.button-clear {
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
+}
+
+.button.button-clear:hover {
+  background-color: var(--color-red);
+  color: #fff;
+}
+
+.button.button-clear:active {
+  background-color: var(--color-red-dark);
+  color: #fff;
+  box-shadow: var(--botton-outline-red);
+}
+
+.button.button-delete {
+  text-align: right;
+  padding: 3px 6px;
+  color: var(--color-black);
+}
+
+.button.button-delete:hover {
+  color: var(--color-red);
+}
+
+.button.button-delete:active {
+  transform: translateY(2px);
+}
+
+/* reivew page*/
+
+.intro button {
+  margin-left: auto;
+}
+
+.intro p {
+  margin-left: 10px;
+}
+
+strong {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.intro {
+  margin-bottom: 1rem;
+}
+
+#cards {
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  color: var(--color-black);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin: 10px;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+
+.word {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.definition {
+  text-align: right;
+  margin: 0 20px 20px 0;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.card:hover .definition {
+  opacity: 1;
+}
+
+/*popup*/
+
+.popup-body {
+  background-color: #fff;
+  width: 300px;
+  padding: .7rem;
+}
+
+.popup-body p {
+  margin-bottom: .5rem;
+}
+
+.popup-body .button {
+  margin-right: .5rem;
+}
+
+.popup-body hr {
+  margin: 1rem 0;
+  border-top: 1px solid #f3f3f3;
+}
+
+.popup-body #words {
+  color: var(--color-grey);
+  font-size: .9rem;
+}

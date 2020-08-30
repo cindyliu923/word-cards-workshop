@@ -1,0 +1,20 @@
+{
+  "name": "翻譯, 單字卡",
+  "version": "1.0",
+  "description": "翻譯並儲存你的單字卡",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [{
+    "matches": ["https://*/*", "https://*/*"],
+    "js": ["contentScript.js"]
+  }],
+  "options_page": "review.html",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
